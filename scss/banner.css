@@ -1,0 +1,13 @@
+.banner__container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.banner__container__img {
+  width: 100%;
+  height: auto;
+}
+.banner__container__head1 {
+  position: absolute;
+  top: 19px;
+}/*# sourceMappingURL=banner.css.map */

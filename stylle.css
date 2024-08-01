@@ -1,0 +1,123 @@
+.nav1 {
+  display: flex;
+  background-color: #003d29;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  color: white;
+  flex-wrap: wrap;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 12px;
+}
+@media screen and (max-width: 991px) {
+  .nav1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.nav2 {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+  padding-top: 20px;
+}
+@media screen and (max-width: 991px) {
+  .nav2 {
+    padding-left: 0px;
+  }
+}
+.nav2__lists {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.nav2__lists :hover {
+  color: rgb(93, 92, 92);
+}
+@media screen and (max-width: 991px) {
+  .nav2__lists {
+    display: none;
+  }
+}
+.nav2__div {
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .nav2__div {
+    display: none;
+  }
+}
+.nav2__div__input {
+  width: 250px;
+  height: 40px;
+  box-shadow: none;
+  border-radius: 100px;
+  padding-left: 20px;
+  padding-right: 50px;
+  border: 1px solid grey;
+}
+.nav2__div__icon {
+  position: absolute;
+  right: 25px;
+  top: 12px;
+}
+@media screen and (max-width: 480px) {
+  .nav2__account, .nav2__cart {
+    display: none;
+  }
+}
+.nav2__ham {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .nav2__ham {
+    display: block;
+    right: 5px;
+  }
+}
+
+.banner__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #003d29;
+}
+.banner__container__img {
+  width: 100%;
+  height: 100%;
+}
+.banner__container__head1 {
+  padding-left: 50px;
+  position: absolute;
+  top: 20%;
+  font-size: 2.5rem;
+}
+.banner__container__head2 {
+  padding-left: 50px;
+  position: absolute;
+  top: 30%;
+  font-size: 2.5rem;
+}
+.banner__container__para {
+  padding-left: 50px;
+  width: 500px;
+  position: absolute;
+  top: 43%;
+  font-size: large;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}/*# sourceMappingURL=stylle.css.map */

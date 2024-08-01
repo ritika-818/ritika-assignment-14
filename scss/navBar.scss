@@ -1,0 +1,79 @@
+@import "./variable.scss";
+
+.nav1 {
+  display: flex;
+  background-color: $greenColor;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  color: $whiteColor;
+  flex-wrap: wrap;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 12px;
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.nav2 {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  align-items: center;
+  padding-top: 20px;
+  @media screen and (max-width: 991px) {
+    padding-left: 0px;
+    }
+  &__lists {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    cursor: pointer;
+    :hover {
+      color: $greyColor;
+    }
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+  &__div {
+    position: relative;
+    @media screen and (max-width: 991px) {
+        display: none;
+      }
+    &__input {
+      width: 250px;
+      height: 40px;
+      box-shadow: none;
+      border-radius: 100px;
+      padding-left: 20px;
+      padding-right: 50px;
+      border: 1px solid grey;
+    }
+    &__icon {
+      position: absolute;
+      right: 25px;
+      top: 12px;
+    }
+  }
+  &__account, &__cart{
+    @media screen and (max-width: 480px) {
+        display: none;
+      }
+  }
+  &__ham{
+    display: none;
+    @media screen and (max-width: 991px) {
+        display: block;
+        right: 5px;
+      }
+  }
+}
