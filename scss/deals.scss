@@ -1,0 +1,130 @@
+.deals-section {
+  margin: 40px;
+  position: relative;
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+
+  .deals {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 1px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: $greenColor;
+      border-radius: 50px;
+      height: 4px;
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: $greenColor $whiteColor;
+  }
+
+  .deal-item {
+    padding: 20px;
+    text-align: left;
+      position: relative;
+
+    .img-container {
+      position: relative;
+      border-radius: 12px;
+      
+    background: rgb(246, 244, 244);
+      
+      min-width: 350px;
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+      }
+      & .icon {
+        position: absolute;
+        top:10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+
+    h3 {
+        display: flex;
+        justify-content: space-between;
+      font-size: 18px;
+      margin: 15px 0 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .price-rating {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .rating {
+        font-size: 14px;
+        color: #666;
+        & .heart-icon{
+            color: green;
+        }
+      }
+    }
+
+    .add-to-cart {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      color: $blackColor;
+      border: 1 px solid $blackColor;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 14px;
+
+      &:hover {
+        background: $greyColor;
+      }
+    }
+  }
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  position: fixed;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: transform 0.1s ease;
+
+  &::after {
+    content: "Drag";
+  }
+}

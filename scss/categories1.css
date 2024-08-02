@@ -1,0 +1,41 @@
+.categories-section {
+  margin-top: 70px;
+  padding: 50px;
+}
+
+.categories {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.category-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.category-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.category-item span {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.category-item:hover {
+  transform: scale(1.05);
+}
+.category-item:hover img {
+  transform: scale(1.1);
+}/*# sourceMappingURL=categories1.css.map */

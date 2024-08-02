@@ -1,0 +1,118 @@
+.deals-section {
+  text-align: center;
+  margin: 40px;
+  position: relative;
+}
+.deals-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.deals-section .deals {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f5f5f5;
+}
+.deals-section .deals ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.deals-section .deals ::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+.deals-section .deals ::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.deals-section .deals ::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+.deals-section .deal-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  min-width: 450px;
+}
+.deals-section .deal-item .img-container {
+  position: relative;
+  border-radius: 12px;
+}
+.deals-section .deal-item .img-container img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.deals-section .deal-item .img-container img.icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.deals-section .deal-item .img-container:hover img {
+  transform: scale(1.1);
+}
+.deals-section .deal-item h3 {
+  font-size: 18px;
+  margin: 15px 0 5px;
+}
+.deals-section .deal-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.deals-section .deal-item .price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deals-section .deal-item .price-rating .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.deals-section .deal-item .price-rating .rating {
+  font-size: 14px;
+  color: #666;
+}
+.deals-section .deal-item .add-to-cart {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+.deals-section .deal-item .add-to-cart:hover {
+  background: #555;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  position: fixed;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: transform 0.1s ease;
+}
+.cursor::after {
+  content: "Drag";
+}/*# sourceMappingURL=deals.css.map */
