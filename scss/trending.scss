@@ -20,6 +20,9 @@
                 background-size: cover;
                 background-position: center;
                 height: 300px;
+                &:hover{
+                    transform:scale(1.1); 
+                }
             }
 
             .product-info {

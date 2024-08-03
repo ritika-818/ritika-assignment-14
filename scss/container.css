@@ -40,11 +40,16 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 @media screen and (max-width: 993px) {
   .container .card-container .card {
     height: 550px;
   }
+}
+.container .card-container .card img {
+  background-size: cover;
+  background-position: center;
 }
 .container .card-container .card .card-content {
   padding: 20px;

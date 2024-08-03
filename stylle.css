@@ -149,6 +149,14 @@
   cursor: pointer;
   font-size: large;
 }
+@media screen and (max-width: 573px) {
+  .banner__container__btn {
+    width: 100px;
+    height: 30px;
+    font-size: small;
+    top: 65%;
+  }
+}
 .banner__container__btn :hover {
   background-color: black;
 }
@@ -413,11 +421,16 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 @media screen and (max-width: 993px) {
   .container .card-container .card {
     height: 550px;
   }
+}
+.container .card-container .card img {
+  background-size: cover;
+  background-position: center;
 }
 .container .card-container .card .card-content {
   padding: 20px;
@@ -659,10 +672,17 @@
   display: flex;
 }
 .footer .footer-container .footer-links {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+@media screen and (max-width: 998px) {
+  .footer .footer-container .footer-links {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
 }
 .footer .footer-container .footer-links .column {
   margin-bottom: 1rem;
@@ -711,19 +731,6 @@
   font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-  .footer-container .footer-left,
-  .footer-container .footer-links {
-    max-width: 100%;
-  }
-  .footer-container .footer-links .column {
-    margin-left: 50px;
-    width: 100%;
-  }
-}
 .trending {
   margin: 60px;
 }
@@ -751,6 +758,9 @@
   background-size: cover;
   background-position: center;
   height: 300px;
+}
+.trending .product-cards .product-card .product-image:hover {
+  transform: scale(1.1);
 }
 .trending .product-cards .product-card .product-info {
   padding: 15px;
@@ -798,6 +808,12 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 976px) {
+  .selling {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .selling .store-cards {
   display: flex;
   flex-wrap: wrap;
@@ -812,12 +828,16 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 .selling .store-cards .store-card .store-image {
   background-size: cover;
   background-position: center;
   height: 200px;
   position: relative;
+}
+.selling .store-cards .store-card .store-image:hover {
+  transform: scale(1.1);
 }
 .selling .store-cards .store-card .store-image .store-badge {
   height: 50px;
@@ -926,6 +946,12 @@
   font-weight: bold;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 720px) {
+  .deals-section2 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 .deals-section2 .category-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -945,55 +971,97 @@
   color: white;
   border-color: #004b23;
 }
-.deals-section2 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
+.deals-section2 .deals {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.deals-section2 .card-container .card {
-  flex: 1 1 calc(25% - 20px);
-  background-color: red;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+@media screen and (max-width: 940px) {
+  .deals-section2 .deals {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.deals-section2 .deals .deal-item {
+  max-width: 300px;
+  padding: 20px;
   text-align: left;
+  position: relative;
 }
-.deals-section2 .card-container .card img {
+@media screen and (max-width: 976px) {
+  .deals-section2 .deals .deal-item {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .deals-section2 .deals .deal-item {
+    max-width: 400px;
+    padding: 10px;
+  }
+}
+.deals-section2 .deals .deal-item .img-container {
+  position: relative;
+  border-radius: 12px;
+  height: 200px;
+  background: rgb(246, 244, 244);
+}
+.deals-section2 .deals .deal-item .img-container img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
-.deals-section2 .card-container .card .card-content h3 {
-  font-size: 16px;
+.deals-section2 .deals .deal-item .img-container .icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
-.deals-section2 .card-container .card .card-content p {
-  font-size: 14px;
-  color: #777;
+.deals-section2 .deals .deal-item .img-container:hover img {
+  transform: scale(1.1);
 }
-.deals-section2 .card-container .card .card-content .rating {
-  font-size: 14px;
-  color: #28a745;
-}
-.deals-section2 .card-container .card .card-content .rating span:first-child {
-  color: #ffcc00;
-}
-.deals-section2 .card-container .card .card-content .price {
+.deals-section2 .deals .deal-item h3 {
+  display: flex;
+  justify-content: space-between;
   font-size: 18px;
+  margin: 15px 0 5px;
+}
+.deals-section2 .deals .deal-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.deals-section2 .deals .deal-item .price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deals-section2 .deals .deal-item .price-rating .price {
+  font-size: 20px;
   font-weight: bold;
+  color: #333;
 }
-.deals-section2 .card-container .card .card-content .add-to-cart {
-  background-color: #004b23;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+.deals-section2 .deals .deal-item .price-rating .rating {
+  font-size: 14px;
+  color: #666;
+}
+.deals-section2 .deals .deal-item .price-rating .rating .heart-icon {
+  color: green;
+}
+.deals-section2 .deals .deal-item .add-to-cart {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: black;
+  border: 1 px solid black;
+  border-radius: 8px;
   cursor: pointer;
-  width: 100%;
   text-align: center;
+  font-size: 14px;
 }
-.deals-section2 .card-container .card .card-content .add-to-cart:hover {
-  background-color: #003b1d;
+.deals-section2 .deals .deal-item .add-to-cart:hover {
+  background: rgb(93, 92, 92);
 }
 
 @media (max-width: 768px) {

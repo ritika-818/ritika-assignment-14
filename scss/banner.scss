@@ -44,6 +44,11 @@
         }
         &__btn{
             @include learnMore();
+            @media screen and (max-width: 573px) {
+                width: 100px;
+                height: 30px;
+                font-size: small;top:65%;
+              }
             :hover{
                 background-color: $blackColor;
             }
