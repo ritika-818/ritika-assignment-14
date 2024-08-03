@@ -1,0 +1,75 @@
+.selling {
+  margin: 60px;
+  margin-bottom: 50px;
+  margin-right: 50px;
+}
+.selling h2 {
+  margin-top: 70px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.selling .store-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.selling .store-cards .store-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  flex: 1 1 calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.selling .store-cards .store-card .store-image {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+}
+.selling .store-cards .store-card .store-image .store-badge {
+  height: 50px;
+  top: 150px;
+  position: absolute;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.selling .store-cards .store-card .store-info {
+  padding: 25px;
+  text-align: left;
+}
+.selling .store-cards .store-card .store-info h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+.selling .store-cards .store-card .store-info p {
+  margin: 0;
+  color: #555;
+  font-size: medium;
+  font-weight: 100;
+}
+.selling .store-cards .store-card .store-info p.delivery-time {
+  margin-top: 10px;
+  color: #d9534f;
+}
+@media (max-width: 768px) {
+  .selling .store-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .selling .store-cards .store-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .selling .store-cards .store-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}/*# sourceMappingURL=selling.css.map */

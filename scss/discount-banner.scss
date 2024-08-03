@@ -1,11 +1,17 @@
-.discount-banner{
+@import "./mixin.scss";
+@import "./variable.scss";
+
+.discount-banner {
   height: 100vh;
   width: 100%;
   overflow: hidden;
   will-change: transform;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
+  @media screen and (max-width:580px){
+    height: 400px;
+  }
+
   & .banner-image {
     z-index: -1;
     width: 100%;
@@ -19,5 +25,49 @@
     bottom: auto;
     left: 0%;
     right: auto;
+  }
+
+  & .image-div {
+    width: 100%;
+    position: absolute;
+    max-width: 500px;
+    margin-left: 50px;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    overflow: hidden;
+    top:60px;
+      right:0px;
+
+    & .image-content {
+      background-color: $greenColor;
+      text-align: left;
+      padding: 75px 64px;
+      display: inline-block;
+      height: 250px;
+      width: 300px;
+      
+      color: $whiteColor;
+      
+
+      & .image-title {
+        max-width: 381px;
+        margin-top: 0;
+        font-size: 45px;
+        margin-bottom: 12px;
+      }
+      & p{
+        font-size: large;
+      }
+      & .learn-btn{
+        @include learnMore();
+        top:75%;
+        left: 17%;
+        border: 1px solid $whiteColor;
+        &:hover{
+          background-color: #231F1E;
+        }
+      }
+    }
   }
 }

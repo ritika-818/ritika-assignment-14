@@ -1,3 +1,5 @@
+@import "./mixin.scss";
+
 .banner{
     &__container{
         width: 100%;
@@ -41,17 +43,7 @@
               }
         }
         &__btn{
-            position: absolute;
-            left: 50px;
-            top: 53%;
-            color: $whiteColor;
-            background-color: $greenColor;
-            height: 50px;
-            width: 150px;
-            border-radius: 30px;
-            border: 1px solid $greenColor;
-            cursor: pointer;
-            font-size: large;
+            @include learnMore();
             :hover{
                 background-color: $blackColor;
             }

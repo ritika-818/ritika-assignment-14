@@ -1,0 +1,103 @@
+@import "./mixin.scss";
+
+.deals-section2 {
+    @include heading();
+
+    .category-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        button {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+
+            &.active {
+                background-color: #004b23;
+                color: white;
+                border-color: #004b23;
+            }
+        }
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        .card {
+            flex: 1 1 calc(25% - 20px);
+            background-color: red;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: left;
+    
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+    
+            .card-content {
+    
+                h3 {
+                    font-size: 16px;
+                }
+    
+                p {
+                    font-size: 14px;
+                    color: #777;
+                }
+    
+                .rating {
+                    font-size: 14px;
+                    color: #28a745;
+    
+                    span:first-child {
+                        color: #ffcc00;
+                    }
+                }
+    
+                .price {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+    
+                .add-to-cart {
+                    background-color: #004b23;
+                    color: white;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    width: 100%;
+                    text-align: center;
+    
+                    &:hover {
+                        background-color: #003b1d;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}

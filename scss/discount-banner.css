@@ -6,6 +6,11 @@
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
+@media screen and (max-width: 580px) {
+  .discount-banner {
+    height: 400px;
+  }
+}
 .discount-banner .banner-image {
   z-index: -1;
   width: 100%;
@@ -19,4 +24,53 @@
   bottom: auto;
   left: 0%;
   right: auto;
+}
+.discount-banner .image-div {
+  width: 100%;
+  position: absolute;
+  max-width: 500px;
+  margin-left: 50px;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: hidden;
+  top: 60px;
+  right: 0px;
+}
+.discount-banner .image-div .image-content {
+  background-color: #003d29;
+  text-align: left;
+  padding: 75px 64px;
+  display: inline-block;
+  height: 250px;
+  width: 300px;
+  color: white;
+}
+.discount-banner .image-div .image-content .image-title {
+  max-width: 381px;
+  margin-top: 0;
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+.discount-banner .image-div .image-content p {
+  font-size: large;
+}
+.discount-banner .image-div .image-content .learn-btn {
+  position: absolute;
+  left: 50px;
+  top: 53%;
+  color: white;
+  background-color: #003d29;
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  border: 1px solid #003d29;
+  cursor: pointer;
+  font-size: large;
+  top: 75%;
+  left: 17%;
+  border: 1px solid white;
+}
+.discount-banner .image-div .image-content .learn-btn:hover {
+  background-color: #231F1E;
 }/*# sourceMappingURL=discount-banner.css.map */

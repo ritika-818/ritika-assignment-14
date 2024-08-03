@@ -1,5 +1,5 @@
 @mixin heading(){
-    margin: 40px;
+    margin: 60px;
     
     h2 {
         margin-top: 70px;
@@ -7,4 +7,18 @@
         font-weight: bold;
         margin-bottom: 20px;
       }    
+}
+
+@mixin learnMore(){
+  position: absolute;
+  left: 50px;
+  top: 53%;
+  color: white;
+  background-color: $greenColor;
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  border: 1px solid $greenColor;
+  cursor: pointer;
+  font-size: large;
 }

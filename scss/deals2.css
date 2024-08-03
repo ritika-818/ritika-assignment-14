@@ -1,0 +1,90 @@
+.deals-section2 {
+  margin: 60px;
+}
+.deals-section2 h2 {
+  margin-top: 70px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.deals-section2 .category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.deals-section2 .category-buttons button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+.deals-section2 .category-buttons button.active {
+  background-color: #004b23;
+  color: white;
+  border-color: #004b23;
+}
+.deals-section2 .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+.deals-section2 .card-container .card {
+  flex: 1 1 calc(25% - 20px);
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+}
+.deals-section2 .card-container .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.deals-section2 .card-container .card .card-content h3 {
+  font-size: 16px;
+}
+.deals-section2 .card-container .card .card-content p {
+  font-size: 14px;
+  color: #777;
+}
+.deals-section2 .card-container .card .card-content .rating {
+  font-size: 14px;
+  color: #28a745;
+}
+.deals-section2 .card-container .card .card-content .rating span:first-child {
+  color: #ffcc00;
+}
+.deals-section2 .card-container .card .card-content .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+.deals-section2 .card-container .card .card-content .add-to-cart {
+  background-color: #004b23;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.deals-section2 .card-container .card .card-content .add-to-cart:hover {
+  background-color: #003b1d;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=deals2.css.map */

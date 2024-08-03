@@ -1,0 +1,66 @@
+@import "./mixin.scss";
+@import "./variable.scss";
+
+.cashback {
+  width: auto;
+  height: 300px;
+  max-width: 1360px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 70px;
+  padding-right: 40px;
+  overflow: hidden;
+  background-color: #ffe6cc;
+  & .outer-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    @media  screen and (max-width:572px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    & .inner-div {
+      display: block;
+      & h2 {
+        font-size: 52px;
+        margin-bottom: 15px;
+      }
+      & p {
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+      & .learn-btn {
+        position: absolute;
+        background-color: $greenColor;
+        height: 50px;
+        width: 150px;
+        border-radius: 30px;
+        border: 1px solid $greenColor;
+        color: $whiteColor;
+        cursor: pointer;
+        font-size: large;
+        &:hover {
+          background-color: $blackColor;
+        }
+      }
+    }
+    & .cashback-img{
+        width: 400px;
+        height: 200px;
+        @media  screen and (max-width:780px) {
+            display: none;
+        }
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        border-radius: 10px;
+        
+        }
+    }
+  }
+}

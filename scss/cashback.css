@@ -1,0 +1,66 @@
+.cashback {
+  width: auto;
+  height: 300px;
+  max-width: 1360px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 70px;
+  padding-right: 40px;
+  overflow: hidden;
+  background-color: #ffe6cc;
+}
+.cashback .outer-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 62px;
+  padding-bottom: 62px;
+}
+@media screen and (max-width: 572px) {
+  .cashback .outer-div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.cashback .outer-div .inner-div {
+  display: block;
+}
+.cashback .outer-div .inner-div h2 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+.cashback .outer-div .inner-div p {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.cashback .outer-div .inner-div .learn-btn {
+  position: absolute;
+  background-color: #003d29;
+  height: 50px;
+  width: 150px;
+  border-radius: 30px;
+  border: 1px solid #003d29;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+}
+.cashback .outer-div .inner-div .learn-btn:hover {
+  background-color: black;
+}
+.cashback .outer-div .cashback-img {
+  width: 400px;
+  height: 200px;
+}
+@media screen and (max-width: 780px) {
+  .cashback .outer-div .cashback-img {
+    display: none;
+  }
+}
+.cashback .outer-div .cashback-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}/*# sourceMappingURL=cashback.css.map */

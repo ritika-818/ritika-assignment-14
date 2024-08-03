@@ -1,0 +1,85 @@
+@import "./mixin.scss";
+
+.selling {
+    @include heading();
+    
+    margin-bottom: 50px;
+    margin-right: 50px;
+
+    .store-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .store-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 300px;
+            flex: 1 1 calc(25% - 20px);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+            .store-image {
+                background-size: cover;
+                background-position: center;
+                height: 200px;
+                position: relative;
+
+                .store-badge {
+                    height: 50px;
+                    top:150px;
+                    position: absolute;
+                    left: 10px;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                }
+            }
+
+            .store-info {
+                padding: 25px;
+                text-align: left;
+
+                h2 {
+                    margin: 0 0 10px;
+                    font-size: 18px;
+                }
+
+                p {
+                    margin: 0;
+                    color: #555;
+                    font-size: medium;
+                    font-weight: 100;
+
+                    &.delivery-time {
+                        margin-top: 10px;
+                        color: #d9534f;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .store-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .store-card {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .store-cards {
+            .store-card {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+    }
+}

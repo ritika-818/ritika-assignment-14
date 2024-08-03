@@ -1,5 +1,5 @@
 .container {
-  margin: 40px;
+  margin: 60px;
 }
 .container h2 {
   margin-top: 70px;
@@ -47,7 +47,7 @@
   }
 }
 .container .card-container .card .card-content {
-  padding: 2rem;
+  padding: 20px;
   text-align: left;
 }
 .container .card-container .card .card-content h2 {
@@ -62,6 +62,8 @@
   margin: 0.5rem 0;
 }
 .container .card-container .card .card-content .description {
+  margin-left: 0px;
+  width: 200px;
   color: #777;
 }
 .container .card-container .card img {
