@@ -1,0 +1,88 @@
+@import "./mixin.scss";
+
+
+.container {
+   @include heading();
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+        #card1{
+            background-color: #F2E4D9;
+        }
+        #card2{
+            background-color: #F9DCDC;
+        }
+        #card3{
+            background-color: #F2E4D9;
+        }
+        #card4{
+            background-color: #D2F7EC;
+        }
+        @media screen and (max-width: 993px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+          }
+          @media screen and (max-width: 600px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+          }
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            @media screen and (max-width: 993px) {
+                height: 550px;
+              }
+            .card-content {
+                padding: 2rem;
+                text-align: left;
+                h2 {
+                    font-size: 1.2rem;
+                    color: #555;
+                    margin: 0;
+                }
+                .price {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: #d4a017;
+                    margin: 0.5rem 0;
+                }
+
+                .description {
+                    color: #777;
+                }
+            }
+
+            
+            img{
+                height: 60%;  
+                object-fit: cover;
+                display: block;
+                @media screen and (max-width: 993px) {
+                    object-fit: cover;
+                    height: 100%;
+                display: block;
+                    width: 100vw;
+                  }
+                @media screen and (max-width: 600px) {
+                    object-fit: cover;
+                    height: 100%;
+                display: block;
+                    width: 100vw;
+                  }
+            }
+
+            img {
+
+                &:hover {
+                    
+                transition: transform 0.3s ease;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+

@@ -1,12 +1,8 @@
-.deals-section {
-  margin: 40px;
-  position: relative;
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
+@import "./mixin.scss";
 
+.deals-section {
+    @include heading();
+  position: relative;
   .deals {
     display: flex;
     gap: 15px;
@@ -36,7 +32,7 @@
       position: relative;
       border-radius: 12px;
       
-    background: rgb(246, 244, 244);
+    background: $whiteSmoke;
       
       min-width: 350px;
 
